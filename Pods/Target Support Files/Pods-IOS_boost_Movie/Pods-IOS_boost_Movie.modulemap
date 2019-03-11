@@ -1,0 +1,6 @@
+framework module Pods_IOS_boost_Movie {
+  umbrella header "Pods-IOS_boost_Movie-umbrella.h"
+
+  export *
+  module * { export * }
+}
