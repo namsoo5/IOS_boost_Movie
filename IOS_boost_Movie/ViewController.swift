@@ -16,6 +16,47 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        self.navigationItem.title = "예매율 순"
+        
+        //오른쪽 네비게이션바 아이템만들기
+        //UIBarButtonItem(title: "선택", style: .plain , target: self, action: #selector(selectbtAction(_:)))
+        let myrightBarButtonItem = UIBarButtonItem(image: UIImage(named: "ic_settings"), style: .plain, target: self, action: #selector(sortMovie(_:))
+        )
+        
+        self.navigationItem.rightBarButtonItem = myrightBarButtonItem
+        
+
+        
+    }
+    
+    @objc func sortMovie(_ sender: UIBarButtonItem) -> Void {
+        let alertController = UIAlertController(title: "정렬방식", message: "영화를 어떤순서로 하시겠습니까", preferredStyle: .actionSheet)
+        
+        let reservationAction = UIAlertAction(title: "예매율", style: .default, handler: { (UIAlertAction) in
+            print("press reservation")
+            })
+        
+        let qrationAction = UIAlertAction(title: "큐레이션", style: .default, handler: { (UIAlertAction) in
+            print("press reservation")
+        })
+        
+        let releaseAction = UIAlertAction(title: "개봉일", style: .default, handler: { (UIAlertAction) in
+            print("press reservation")
+        })
+        
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel, handler: { (UIAlertAction) in
+            print("press reservation")
+        })
+        
+        alertController.addAction(reservationAction)
+        alertController.addAction(qrationAction)
+        alertController.addAction(releaseAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true, completion: {
+            print("alert shown")
+        })
+
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -107,6 +148,21 @@ class ViewController: UIViewController, UITableViewDataSource {
             }
         }
         return cell
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "movie"{
+            guard let nextView: ContentViewController = segue.destination as? ContentViewController else { return }
+            
+            //해당(눌린)셀불러오기
+            guard let cell: MovieListTableViewCell = sender as? MovieListTableViewCell else {
+                return
+            }
+
+            nextView.movietitle = cell.movieTitleLabel.text
+        }
+        
     }
     
 }

@@ -14,6 +14,7 @@
 		1B66A1132234ADEC0040B714 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B66A1112234ADEC0040B714 /* LaunchScreen.storyboard */; };
 		1B66A11B2234D4050040B714 /* MovieListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B66A11A2234D4050040B714 /* MovieListTableViewCell.swift */; };
 		1B66A11D2234D6C30040B714 /* MovieRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B66A11C2234D6C30040B714 /* MovieRequest.swift */; };
+		1B66A11F22362D8C0040B714 /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B66A11E22362D8C0040B714 /* ContentViewController.swift */; };
 		2D5C3DB618C5C597395B1897 /* Pods_IOS_boost_Movie.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EA7316AA4BB8D0CA993BD233 /* Pods_IOS_boost_Movie.framework */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		1B66A1142234ADEC0040B714 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B66A11A2234D4050040B714 /* MovieListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewCell.swift; sourceTree = "<group>"; };
 		1B66A11C2234D6C30040B714 /* MovieRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieRequest.swift; sourceTree = "<group>"; };
+		1B66A11E22362D8C0040B714 /* ContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		636BDDF2356122F96DFF3497 /* Pods-IOS_boost_Movie.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS_boost_Movie.release.xcconfig"; path = "Target Support Files/Pods-IOS_boost_Movie/Pods-IOS_boost_Movie.release.xcconfig"; sourceTree = "<group>"; };
 		6BC0D871FD8E19317638CFF9 /* Pods-IOS_boost_Movie.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS_boost_Movie.debug.xcconfig"; path = "Target Support Files/Pods-IOS_boost_Movie/Pods-IOS_boost_Movie.debug.xcconfig"; sourceTree = "<group>"; };
 		EA7316AA4BB8D0CA993BD233 /* Pods_IOS_boost_Movie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IOS_boost_Movie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -80,6 +82,7 @@
 				1B66A11C2234D6C30040B714 /* MovieRequest.swift */,
 				1B66A11A2234D4050040B714 /* MovieListTableViewCell.swift */,
 				1B66A10F2234ADEC0040B714 /* Assets.xcassets */,
+				1B66A11E22362D8C0040B714 /* ContentViewController.swift */,
 				1B66A1112234ADEC0040B714 /* LaunchScreen.storyboard */,
 				1B66A1142234ADEC0040B714 /* Info.plist */,
 			);
@@ -214,6 +217,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1B66A11F22362D8C0040B714 /* ContentViewController.swift in Sources */,
 				1B66A10B2234ADE80040B714 /* ViewController.swift in Sources */,
 				1B66A11B2234D4050040B714 /* MovieListTableViewCell.swift in Sources */,
 				1B66A11D2234D6C30040B714 /* MovieRequest.swift in Sources */,

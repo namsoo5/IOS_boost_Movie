@@ -80,6 +80,7 @@
                                             <outlet property="movieDateLabel" destination="LVA-4b-45n" id="uFp-kq-AhY"/>
                                             <outlet property="movieInfoLabel" destination="RYY-37-Dhl" id="xXY-eR-oWF"/>
                                             <outlet property="movieTitleLabel" destination="imn-ug-k1d" id="9dY-c1-rX1"/>
+                                            <segue destination="qtf-1Y-Aco" kind="show" identifier="movie" id="k9G-Q8-MPX"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -105,6 +106,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1956.521739130435" y="133.25892857142856"/>
+        </scene>
+        <!--Content View Controller-->
+        <scene sceneID="sid-Ak-B0d">
+            <objects>
+                <viewController id="qtf-1Y-Aco" customClass="ContentViewController" customModule="IOS_boost_Movie" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Z9n-ro-HZA">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="lZ7-5N-ReW">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r2g-ss-6Jk">
+                                        <rect key="frame" x="186" y="127" width="42" height="21"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="r2g-ss-6Jk" firstAttribute="centerX" secondItem="lZ7-5N-ReW" secondAttribute="centerX" id="KNc-gp-nOP"/>
+                                    <constraint firstItem="r2g-ss-6Jk" firstAttribute="top" secondItem="lZ7-5N-ReW" secondAttribute="top" constant="127" id="mHt-w3-BAq"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="lZ7-5N-ReW" firstAttribute="top" secondItem="UDW-YM-YQP" secondAttribute="top" id="GFY-wJ-jrV"/>
+                            <constraint firstItem="UDW-YM-YQP" firstAttribute="trailing" secondItem="lZ7-5N-ReW" secondAttribute="trailing" id="Iz7-r9-Pgi"/>
+                            <constraint firstItem="lZ7-5N-ReW" firstAttribute="leading" secondItem="UDW-YM-YQP" secondAttribute="leading" id="Srg-HR-MAU"/>
+                            <constraint firstItem="UDW-YM-YQP" firstAttribute="bottom" secondItem="lZ7-5N-ReW" secondAttribute="bottom" id="dZV-0t-5Gg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="UDW-YM-YQP"/>
+                    </view>
+                    <connections>
+                        <outlet property="movieTitleLabel" destination="r2g-ss-6Jk" id="sIy-7U-L2A"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j9V-es-gIC" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2685.507246376812" y="132.58928571428572"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="aqy-Zo-mam">
@@ -162,7 +204,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0QI-jl-iiA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2781.1594202898555" y="133.92857142857142"/>
+            <point key="canvasLocation" x="3417" y="133"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="0LM-wn-H07">
@@ -191,6 +233,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="HZa-8Y-h3f">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.6779986227" green="0.83476162789999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
